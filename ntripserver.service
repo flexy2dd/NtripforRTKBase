@@ -1,0 +1,14 @@
+[Unit]
+Description=ntripserver
+After=network.target
+After=ntripcaster.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/usr/local/bin/ntripserver -M 2 -H localhost -P 5016 -O 1 -n BASEUSER -c BASEPASSWORD -a localhost -p BASEPORT -m BASEMOUNTPOINT
+
+[Install]
+WantedBy=multi-user.target
+

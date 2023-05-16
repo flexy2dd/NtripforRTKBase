@@ -1,0 +1,7 @@
+/var/log/ntripcaster.log {
+  su root root
+  copytruncate
+  size 10M
+  rotate 5
+  nocompress
+}

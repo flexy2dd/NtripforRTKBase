@@ -1,0 +1,14 @@
+[Unit]
+Description=ntripcaster
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+WorkingDirectory=/usr/local/ntripcaster/bin/
+ExecStart=/usr/local/ntripcaster/bin/ntripcaster
+
+[Install]
+WantedBy=multi-user.target
+
